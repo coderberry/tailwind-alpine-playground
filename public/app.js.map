@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/js/application.js"],
+  "sourcesContent": ["window.app = () => {\n  data: {\n    open: false\n  }\n}"],
+  "mappings": "MAAA,OAAO,IAAM,IAAM,CACjB,EAAM,CACJ,EAAM",
+  "names": []
+}

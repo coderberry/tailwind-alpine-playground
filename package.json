@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "concurrently npm:watch:* npm:server",
+    "build:js": "esbuild --bundle --minify --sourcemap src/js/*.js --outfile=public/app.js",
+    "watch:js": "esbuild src/js/*.js --bundle --outfile=public/app.js --watch",
+    "build:css": "tailwindcss -i ./src/css/application.tailwind.css -o ./public/app.css",
+    "watch:css": "tailwindcss -i ./src/css/application.tailwind.css -o ./public/app.css --watch",
+    "build:html": "html-includes --src src --dest public",
+    "watch:html": "html-includes --src src --dest public --watch",
+    "server": "http-server public -p 4300"
+  },
+  "dependencies": {
+    "daisyui": "^1.16.2",
+    "esbuild": "^0.14.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "html-includes": "^4.4.1",
+    "http-server": "^14.0.0",
+    "tailwindcss": "^3.0.0"
+  }
+}
